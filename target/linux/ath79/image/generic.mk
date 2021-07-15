@@ -1653,6 +1653,20 @@ define Device/ocedo_ursus
 endef
 TARGET_DEVICES += ocedo_ursus
 
+define Device/onion_omega
+  $(Device/tplink-16mlzma)
+  SOC := ar9331
+  DEVICE_VENDOR := Onion
+  DEVICE_MODEL := Omega
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2
+  SUPPORTED_DEVICES += onion-omega
+  KERNEL := kernel-bin | append-dtb | lzma
+  KERNEL_INITRAMFS := kernel-bin | append-dtb | lzma | uImage lzma
+  IMAGE_SIZE := 16192k
+  TPLINK_HWID := 0x04700001
+endef
+TARGET_DEVICES += onion_omega
+
 define Device/openmesh_common_64k
   DEVICE_VENDOR := OpenMesh
   DEVICE_PACKAGES := uboot-envtools
