@@ -1654,6 +1654,7 @@ endef
 TARGET_DEVICES += ocedo_ursus
 
 define Device/onion_omega
+  $(Device/tplink-16mlzma)
   SOC := ar9331
   DEVICE_VENDOR := Onion
   DEVICE_MODEL := Omega
