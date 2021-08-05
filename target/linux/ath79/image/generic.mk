@@ -1660,6 +1660,8 @@ define Device/onion_omega
   DEVICE_MODEL := Omega
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2
   SUPPORTED_DEVICES += onion-omega
+  KERNEL := kernel-bin | append-dtb | lzma
+  KERNEL_INITRAMFS := kernel-bin | append-dtb | lzma | uImage lzma
   IMAGE_SIZE := 16192k
 endef
 TARGET_DEVICES += onion_omega
