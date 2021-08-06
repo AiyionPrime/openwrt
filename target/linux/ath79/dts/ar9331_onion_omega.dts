@@ -63,7 +63,7 @@
 	/* Winbond 25Q128FVSG SPI flash */
 	flash@0 {
 		compatible = "winbond,w25q128", "jedec,spi-nor";
-		spi-max-frequency = <104000000>;
+		spi-max-frequency = <20000000>;
 		reg = <0>;
 
 		partitions {
