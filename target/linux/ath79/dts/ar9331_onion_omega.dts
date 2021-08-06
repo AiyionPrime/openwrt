@@ -69,7 +69,6 @@
 
 	pll-data = <0x1e000000 0x08000101 0x08001313>;
 
-	phy-mode = "rgmii";
 	phy-handle = <&phy0>;
 
 	gmac-config {
