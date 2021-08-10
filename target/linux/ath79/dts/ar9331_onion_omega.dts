@@ -58,9 +58,10 @@
 
 &eth0 {
 	status = "okay";
+}
 
-	mtd-mac-address = <&uboot 0x01fc00>;
-	mac-address-increment = <(-1)>;
+&eth1 {
+	status = "okay";
 };
 
 
