@@ -12,12 +12,29 @@
 
 	aliases {
 		serial0 = &uart;
+		led-boot = &led_system;
+		led-failsafe = &led_system;
+		led-running = &led_system;
+		led-upgrade = &led_system;
 	};
 
 	leds {
 		compatible = "gpio-leds";
 
-		system {
+		expansion-dock-blue {
+			label = "exp-dock-rgb:blue:expansion-dock-blue";
+			gpios = <&gpio 15 GPIO_ACTIVE_LOW>;
+		};
+		expansion-dock-green {
+			label = "exp-dock-rgb:green:expansion-dock-green";
+			gpios = <&gpio 16 GPIO_ACTIVE_LOW>;
+		};
+		expansion-dock-red {
+			label = "exp-dock-rgb:red:expansion-dock-red";
+			gpios = <&gpio 17 GPIO_ACTIVE_LOW>;
+		};
+
+		led_system: system {
 			label = "onion:amber:system";
 			gpios = <&gpio 27 GPIO_ACTIVE_LOW>;
 		};
