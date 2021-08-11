@@ -58,10 +58,16 @@
 
 &eth0 {
 	status = "okay";
+	compatible = "syscon", "simple-mfd";
 };
 
 &eth1 {
 	status = "okay";
+	gmac-config {
+		device = <&gmac>;
+		switch-phy-addr-swap = <1>;
+		switch-phy-swap = <1>;
+	};
 };
 
 
