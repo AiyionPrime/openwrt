@@ -63,10 +63,13 @@
 
 &eth1 {
 	status = "okay";
+	mtd-mac-address = <&uboot 0x01fc00>;
+	mac-address-increment = <(-1)>;
+
 	gmac-config {
 		device = <&gmac>;
-		switch-phy-addr-swap = <1>;
-		switch-phy-swap = <1>;
+		switch-phy-addr-swap = <4>;
+		switch-phy-swap = <4>;
 	};
 };
 
