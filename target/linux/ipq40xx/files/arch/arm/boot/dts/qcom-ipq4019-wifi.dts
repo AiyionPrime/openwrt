@@ -14,6 +14,7 @@
 	compatible = "google,wifi", "google,gale-v2", "qcom,ipq4019";
 
 	aliases {
+		label-mac-device = &gmac0;
 		led-boot = &led0_blue;
 		led-failsafe = &led0_red;
 		led-running = &led0_blue;
