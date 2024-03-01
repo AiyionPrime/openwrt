@@ -144,6 +144,18 @@ define Device/comfast_cf-wr758ac-v2
 endef
 TARGET_DEVICES += comfast_cf-wr758ac-v2
 
+define Device/cudy_lt400
+  IMAGE_SIZE := 7872k
+  UIMAGE_NAME := R6
+  DEVICE_VENDOR := Cudy
+  DEVICE_MODEL := LT400
+  DEVICE_VARIANT := R6
+  SUPPORTED_DEVICES += lt400
+  DEVICE_PACKAGES := kmod-usb2 kmod-usb-serial-option \
+	kmod-usb-net-qmi-wwan uqmi
+endef
+TARGET_DEVICES += cudy_lt400
+
 define Device/cudy_wr1000
   IMAGE_SIZE := 7872k
   IMAGES += factory.bin
